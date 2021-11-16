@@ -24,7 +24,13 @@ Trabalho apresentado ao curso [BI MASTER](https://ica.puc-rio.ai/bi-master) como
 
 <!-- trocar o texto abaixo pelo resumo do trabalho, em português -->
 
-A geraçã ode energia eólica por aerogeradores .
+A geração de energia eólica realizada por aerogeradores tem se tornado uma das principais formas de geração de energia elétrica renovável, apresentando crescimento expressivo ao longo dos últimos anos, onde em 2020 existia 17,8 GW de capacidade instalada no Brasil, sendo o equivalente a 10,1% da Matriz Elétrica Brasileira.
+
+A Energia eólica vem a ser a energia produzida a partir da energia cinética do vento (massas de ar em movimento) e do aquecimento eletromagnético do Sol (energia solar), que, juntos, movimentam as pás de captadores, onde a energia cinética do vento normalmente é convertida em energia mecânica por moinhos e cataventos, ou em energia elétrica por turbinas eólicas (ou aerogeradores).
+
+Este trabalho buscou utllizar uma rede neural LSTM (Long Short Term Model) para avaliar a predição de geração de energia elétrica proveniente de um aerogerador, utilizando os dados coletados referentes a um ano de produção deste aerogerador e utilizando a rede para prever a geração para os meses seguintes. 
+
+A aplicação de um modelo de redes neurais em LSTM (Long Short Term Model) apresentou resultados satisfatórios quanto a base dedados utilizada, que foi a base de dados ser   .
 
 ### Abstract <!-- Opcional! Caso não aplicável, remover esta seção -->
 
