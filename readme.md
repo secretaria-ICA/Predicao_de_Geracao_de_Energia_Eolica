@@ -57,20 +57,29 @@ Uma das desvantagens da geração de energia eólica é a sua intermitência, on
 
 Inicialmente foi realizado o pré-tratamento da base de dados, composta por mais de 118.000 registros de 22 atributos, contemplando o registro da geração de energia obtida pelo aerogerador, desde de janeiro de 2018 a março de 2020, onde após o tratamento foi identificado que os dados do ano de 2018 possuíam muitas ausÊncias de informações, onde optou-se por utilizar os dados do ano de 2019 (52.600 registros), sendo os dados referentes ao ano de 2020 (4.700 registroa) utilizados para testar os resultados. Foi testada uma rede neural LSTM e utilizado o indicador de acurácia R2.
 
-A implementação da rede LSTM foi realizada utilizando a biblioteca Keras, sendo a rede configurada com 3 camadas conectadas, adicionadas camadas de eliminação (dropout) após cada camada LSTM oculta, buscando evitar o problema de overfitting. Foram testados os parâmetros da rede e suas configuraçãoes em diversas rodadas, chegado 
+A implementação da rede LSTM foi realizada utilizando a biblioteca Keras, sendo a rede configurada com 3 camadas conectadas, adicionadas camadas de eliminação (dropout) após cada camada LSTM oculta, buscando evitar o problema de overfitting. Foram testados os parâmetros da rede e suas configuraçãoes em diversas rodadas, chegando a uma confirguração da rede que se entendeu sera a ideal, conforme a tabela abaixo, e para as configurações de aprendizagem, foi utilizado o otimizados ADAM.
+
 ![image](https://user-images.githubusercontent.com/83325612/142867864-dea2f7e4-3fd3-4013-8d7a-d96a65625a8e.png)
+
+Foi utilizado o otimizador adam com taxa de aprendizado de 0,01, que é o valor padrão para o otimizador adam, e o erro médio quadrático (MSE, do inglês Mean Squared Error) foi definido como função de perda
 
 ### 3. Resultados
 
-Após a aplicação da rede neural os resultados do modelo testado apresentaram um resultado satisfatório para a previsão de geração de energia com alto valor de R2 de 0,94.
+Após a aplicação da rede neural os resultados do modelo testado apresentaram um resultado satisfatório para a previsão de geração de energia com alto valor de R2 de 0,94, tentou-se utilizar também o parâmetro MAPE mas este não se mostrou adequado a base de dados.
 
 ### 4. Conclusões
 
-A aplicação da rede neural LSTM a base de dados de registros de geração de energia eólica de um aerogerador apresentou um resultado satisfatório quanto a previsão da geração  
+Este trabalho propôs a aplicação de um rede neural LSTM para previsão da geração de energia eólica produzida por um aerogerador, onde após o pré-tratamento da base de dados com o registro histórico dos anos de 2018, 2019 e até o mês de março de 2020, optou-se por excluir os dados do ano de 2018, pois apresentavam muitos dados ausentes, que poderiam reprsentar tanto a ausência de ventos ou longos períodos de manutenção, sendo utilizado o ano de 2019 para o treinamento da rede e os dados do ano de 2020 utilizados para a base de treino e previsão da geração futura.
+
+A aplicação da rede neural LSTM a base de dados de registros de geração de energia eólica de um aerogerador apresentou um resultado satisfatório quanto a previsão da geração, conforme apresentado no gráfico abaixo e no resultado do parâmetro R2.  
+
+![image](https://user-images.githubusercontent.com/83325612/142870065-697c72dc-a034-4d25-a9c7-2728dd2217b4.png)
+
+A título de trabalhos futuros entende-se que a aplicação em outras bases de dados de outros aerogeradores permitirá confirmar a efetividade da rede aplicada, principalmente pela variação do regime de ventos existente em cada região, podendo ainda implementar a associação de redes neurais LSTM com arquiteturas autoenconders e redes convolucionais.
 
 ---
 
-Matrícula: 192.101.067
+Matrícula: 192.671.010
 
 Pontifícia Universidade Católica do Rio de Janeiro
 
