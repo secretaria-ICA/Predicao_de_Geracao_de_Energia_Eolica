@@ -13,9 +13,7 @@ Trabalho apresentado ao curso [BI MASTER](https://ica.puc-rio.ai/bi-master) como
 - [Link para o código](https://github.com/link_do_repositorio). <!-- caso não aplicável, remover esta linha -->
 
 
-- Trabalhos relacionados: <!-- caso não aplicável, remover estas linhas -->
-    - [Nome do Trabalho 1](https://link_do_trabalho.com).
-    - [Nome do Trabalho 2](https://link_do_trabalho.com).
+
 
 ---
 
@@ -37,18 +35,18 @@ A aplicação de um modelo de redes neurais em LSTM (Long Short Term Memory) apr
 
 The generation of wind energy using wind turbines has become one of the main forms of renewable electricity generation, showing significant growth over the past few years, where in 2020 there was 17.8 GW of installed capacity in Brazil, equivalent to 10.1% of the Brazilian Electricity Matrix, and with a total avoided emissions in 2020 of 21.2 million tons of CO2, equivalent to the annual emission of around 21 million passenger cars.
 
-Wind energy is the energy produced from the kinetic energy of the wind (moving air masses) and the electromagnetic heating of the Sun (solar energy), which together move the pickup blades, where the kinetic energy of the wind it is usually converted into mechanical energy by windmills and weathervanes, or into electrical energy by wind turbines (or wind turbines).
+Wind energy is the energy produced from the kinetic energy of the wind (moving air masses) and the electromagnetic heating of the Sun (solar energy), which together move the pickup blades, where the kinetic energy of the wind it is usually converted into mechanical energy by windmills and weathervanes, or into electrical energy by wind turbines.
 
-This work sought to use a neural network LSTM (Long Short Term Model) to evaluate the prediction of electricity generation from a wind turbine, using data collected for one year of production of this wind turbine and using the network to predict the generation for the following months.
+This work use a neural network LSTM (Long Short Term Model) to evaluate the prediction of electricity generation from a wind turbine, using data collected for one year of production of this wind turbine and using the network to predict the generation for the following months.
 
 The application of a neural network model in LSTM (Long Short Term Model) presented satisfactory results for the database used, obtained from www.kaggle.com, https://www.kaggle .com/theforcecoder/wind-power-forecasting?select=Turbine_Data.csv.
 
 ### 1. Introdução
 
 
-Energia eólica é a energia cinética derivada da força dos ventos, que pode ser utilizada para várias finalidades, incluindo a produção de eletricidade a partir de aerogeradores, onde os ventos movimetnam as hélices das turbinas eólicas, gerando força mecânica, que depois é convertida em energia elétrica por meio de um gerador. 
+Energia eólica é a energia cinética derivada da força dos ventos, que pode ser utilizada para várias finalidades, incluindo a produção de eletricidade a partir de aerogeradores, onde os ventos movimentam as hélices das turbinas eólicas, gerando força mecânica, que depois é convertida em energia elétrica por meio de um gerador. 
 
-Atualmente a energia eólica é a segunda fonte renovável mais utilizada no mundo, depois da energia hídrica, onde segundo os dados da Agência Internacional de Energia Renovável (Irena), a capacidade total instalada de geradores eólicos atingiu 732,41 GW em 2020, impulsionado pela sua fonte de energia inesgotável, que é o vento, e pelo fato de não emitir poluentes, gases de efeito estufa e nem gerar resíduos, apresentando ainda as vantagens de não haver custos associados à obtenção de uma matéria-prima, diferente do que ocorre com combustíveis fósseis.
+Atualmente a energia eólica é a segunda fonte renovável mais utilizada no mundo, depois da energia hídrica, onde segundo os dados da Agência Internacional de Energia Renovável (IRENA), a capacidade total instalada de geradores eólicos atingiu 732,41 GW em 2020, impulsionado pela sua fonte de energia inesgotável, que é o vento, e pelo fato de não emitir poluentes, gases de efeito estufa e nem gerar resíduos, apresentando ainda as vantagens de não haver custos associados à obtenção de uma matéria-prima, diferente do que ocorre com combustíveis fósseis.
 
 Uma das desvantagens da geração de energia eólica é a sua intermitência, onde por esta razão se torna de fundamental importância tentar prever o comprtamento de sua geração, diretamente relacionada ao regime dos ventos. O objetivo deste trabalho foi avvaliar a geração de energia eólica de um aerogerador, tomando por base os dados registrados de geração de energia de janeiro de 2018 a março de 2020 com intervalos de 10 minutos, buscando realizar a previsao da geração com base nestes registros, através do uso de uma Redes Neurais LSTM (Long Short Term Model)
 
@@ -61,15 +59,14 @@ A implementação da rede LSTM foi realizada utilizando a biblioteca Keras, send
 
 ![image](https://user-images.githubusercontent.com/83325612/142867864-dea2f7e4-3fd3-4013-8d7a-d96a65625a8e.png)
 
-Foi utilizado o otimizador adam com taxa de aprendizado de 0,01, que é o valor padrão para o otimizador adam, e o erro médio quadrático (MSE, do inglês Mean Squared Error) foi definido como função de perda
 
 ### 3. Resultados
 
-Após a aplicação da rede neural os resultados do modelo testado apresentaram um resultado satisfatório para a previsão de geração de energia com alto valor de R2 de 0,94, tentou-se utilizar também o parâmetro MAPE mas este não se mostrou adequado a base de dados.
+Após a aplicação da rede neural os resultados do modelo testado foram satisfatórios para a previsão de geração de energia com alto valor de R2 de 0,94, tentou-se utilizar também o parâmetro MAPE mas este não se mostrou adequado para a base de dados utilizada.
 
 ### 4. Conclusões
 
-Este trabalho propôs a aplicação de um rede neural LSTM para previsão da geração de energia eólica produzida por um aerogerador, onde após o pré-tratamento da base de dados com o registro histórico dos anos de 2018, 2019 e até o mês de março de 2020, optou-se por excluir os dados do ano de 2018, pois apresentavam muitos dados ausentes, que poderiam reprsentar tanto a ausência de ventos ou longos períodos de manutenção, sendo utilizado o ano de 2019 para o treinamento da rede e os dados do ano de 2020 utilizados para a base de treino e previsão da geração futura.
+Este trabalho propôs a aplicação de um rede neural LSTM para previsão da geração de energia eólica produzida por um aerogerador, onde após o pré-tratamento da base de dados com o registro histórico dos anos de 2018, 2019 e até o mês de março de 2020, optou-se por excluir os dados do ano de 2018, pois apresentavam muitos dados ausentes, que poderiam representar tanto a ausência de ventos quanto longos períodos de manutenção, sendo utilizado o ano de 2019 para o treinamento da rede e os dados do ano de 2020 utilizados para a base de treino e previsão da geração futura.
 
 A aplicação da rede neural LSTM a base de dados de registros de geração de energia eólica de um aerogerador apresentou um resultado satisfatório quanto a previsão da geração, conforme apresentado no gráfico abaixo e no resultado do parâmetro R2.  
 
