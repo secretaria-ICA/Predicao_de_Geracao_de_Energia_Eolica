@@ -1,5 +1,5 @@
 <!-- antes de enviar a versão final, solicitamos que todos os comentários, colocados para orientação ao aluno, sejam removidos do arquivo -->
-# Predição de Geração de Energia Eólica
+# Predição_de_Geração_de_Energia_Eólica
 
 #### Aluno: [Tales Simões Mattos](https://github.com/Talesbr/ProjetoBI)
 #### Orientadora: [Manoela Rabello Kohler](https://github.com/manoelakohler).
